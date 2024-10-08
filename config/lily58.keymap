@@ -64,7 +64,7 @@
 &trans      &none             &kp HOME           &kp UP_ARROW       &kp END       &none                                                           &kp PLUS         &kp HOME  &kp UP_ARROW    &kp END           &none      &kp UNDER
 &trans      &kp EXCL          &kp LEFT_ARROW     &kp DOWN_ARROW     &kp RIGHT     &none                                                           &kp EQUAL        &kp LEFT  &kp DOWN_ARROW  &kp RIGHT         &kp COLON  &kp DOUBLE_QUOTES
 &trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &kp PRINTSCREEN  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp PRINTSCREEN  &none     &kp LESS_THAN   &kp GREATER_THAN  &kp PIPE   &trans
-                                                 &trans             &none         &trans           &trans                  &trans                 &trans           &mo 3     &trans
+                                                 &trans             &mo 3         &trans           &trans                  &trans                 &trans           &none     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
