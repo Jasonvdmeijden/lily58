@@ -36,12 +36,12 @@
 
         commandpallet {
             bindings = <&kp LC(LS(P))>;
-            key-positions = <31 32>;
+            key-positions = <31 32 56>;
         };
 
         searchpallet {
             bindings = <&kp LC(P)>;
-            key-positions = <27 28>;
+            key-positions = <27 28 51>;
         };
 
         end {
