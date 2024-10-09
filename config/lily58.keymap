@@ -87,7 +87,7 @@
 &bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                                                  &out OUT_TOG       &trans    &trans          &trans            &trans     &kp TILDE
 &trans      &none             &kp HOME           &kp UP_ARROW       &kp END       &none                                                         &kp PLUS           &kp HOME  &kp UP_ARROW    &kp END           &none      &kp UNDER
 &trans      &kp EXCL          &kp LEFT_ARROW     &kp DOWN_ARROW     &kp RIGHT     &none                                                         &kp EQUAL          &kp LEFT  &kp DOWN_ARROW  &kp RIGHT         &kp COLON  &kp DOUBLE_QUOTES
-&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &kp LS(LG(S))  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LS(LG(S))      &none     &kp LESS_THAN   &kp GREATER_THAN  &kp PIPE   &trans
+&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &kp LG(LS(S))  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LG(LS(S))      &none     &kp LESS_THAN   &kp GREATER_THAN  &kp PIPE   &trans
                                                  &trans             &none         &trans         &trans                  &trans                 &kp LC(BACKSPACE)  &mo 3     &kp LC(DELETE)
             >;
 
@@ -106,7 +106,7 @@
 &bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                                                  &out OUT_TOG   &trans    &trans          &trans            &trans     &kp TILDE
 &trans      &none             &kp HOME           &kp UP_ARROW       &kp END       &kp PLUS                                                      &none          &kp HOME  &kp UP_ARROW    &kp END           &none      &kp UNDER
 &trans      &kp EXCL          &kp LEFT_ARROW     &kp DOWN_ARROW     &kp RIGHT     &kp EQUAL                                                     &none          &kp LEFT  &kp DOWN_ARROW  &kp RIGHT         &kp COLON  &kp DOUBLE_QUOTES
-&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &kp LG(LC(S))  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LS(LG(S))  &none     &kp LESS_THAN   &kp GREATER_THAN  &kp PIPE   &trans
+&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &kp LG(LS(S))  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LG(LS(S))  &none     &kp LESS_THAN   &kp GREATER_THAN  &kp PIPE   &trans
                                                  &trans             &mo 3         &trans         &trans                  &trans                 &trans         &none     &trans
             >;
         };
@@ -118,6 +118,16 @@
 &trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6     &trans         &trans  &trans
 &trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &trans         &trans  &trans
                           &trans   &trans   &trans   &trans    &trans        &trans        &trans        &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
     };
