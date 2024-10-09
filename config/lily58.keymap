@@ -84,11 +84,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                                                  &out OUT_TOG       &trans    &trans          &trans            &trans     &kp TILDE
-&trans      &none             &kp HOME           &kp UP_ARROW       &kp END       &none                                                         &kp PLUS           &kp HOME  &kp UP_ARROW    &kp END           &none      &kp UNDER
-&trans      &kp EXCL          &kp LEFT_ARROW     &kp DOWN_ARROW     &kp RIGHT     &none                                                         &kp EQUAL          &kp LEFT  &kp DOWN_ARROW  &kp RIGHT         &kp COLON  &kp DOUBLE_QUOTES
-&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &kp LG(LS(S))  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LG(LS(S))      &none     &kp LESS_THAN   &kp GREATER_THAN  &kp PIPE   &trans
-                                                 &trans             &none         &trans         &trans                  &trans                 &kp LC(BACKSPACE)  &mo 3     &kp LC(DELETE)
+&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4                                                  &out OUT_TOG       &trans    &trans          &trans            &trans     &kp TILDE
+&trans            &none         &kp HOME        &kp UP_ARROW    &kp END       &none                                                         &kp PLUS           &kp HOME  &kp UP_ARROW    &kp END           &none      &kp UNDER
+&trans            &kp EXCL      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT     &none                                                         &kp EQUAL          &kp LEFT  &kp DOWN_ARROW  &kp RIGHT         &kp COLON  &kp DOUBLE_QUOTES
+&ext_power EP_ON  &none         &none           &none           &trans        &kp LG(LS(S))  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LG(LS(S))      &none     &kp LESS_THAN   &kp GREATER_THAN  &kp PIPE   &ext_power EP_ON
+                                                &trans          &none         &trans         &trans                  &trans                 &kp LC(BACKSPACE)  &mo 3     &kp LC(DELETE)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -103,21 +103,21 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                                                  &out OUT_TOG       &trans    &trans          &trans            &trans     &kp TILDE
-&trans      &none             &kp HOME           &kp UP_ARROW       &kp END       &kp PLUS                                                      &none              &kp HOME  &kp UP_ARROW    &kp END           &none      &kp UNDER
-&trans      &kp EXCL          &kp LEFT_ARROW     &kp DOWN_ARROW     &kp RIGHT     &kp EQUAL                                                     &none              &kp LEFT  &kp DOWN_ARROW  &kp RIGHT         &kp COLON  &kp DOUBLE_QUOTES
-&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &kp LG(LS(S))  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LG(LS(S))      &none     &kp LESS_THAN   &kp GREATER_THAN  &kp PIPE   &trans
-                                                 &trans             &mo 3         &trans         &trans                  &trans                 &kp LC(BACKSPACE)  &none     &kp LC(DELETE)
+&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4                                                  &out OUT_TOG       &none     &none           &none             &none      &kp TILDE
+&none             &none         &kp HOME        &kp UP_ARROW    &kp END       &kp PLUS                                                      &none              &kp HOME  &kp UP_ARROW    &kp END           &none      &kp UNDER
+&none             &kp EXCL      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT     &kp EQUAL                                                     &none              &kp LEFT  &kp DOWN_ARROW  &kp RIGHT         &kp COLON  &kp DOUBLE_QUOTES
+&ext_power EP_ON  &none         &none           &none           &none         &kp LG(LS(S))  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LG(LS(S))      &none     &kp LESS_THAN   &kp GREATER_THAN  &kp PIPE   &ext_power EP_ON
+                                                &none           &mo 3         &none          &none                   &none                  &kp LC(BACKSPACE)  &none     &kp LC(DELETE)
             >;
         };
 
         layer_3 {
             bindings = <
-&trans  &trans   &trans   &trans   &trans   &trans                           &kp PLUS      &kp MINUS     &kp KP_MULTIPLY  &kp KP_DIVIDE  &trans  &trans
-&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15                          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9     &trans         &trans  &trans
-&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6     &trans         &trans  &trans
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &trans    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &trans         &trans  &trans
-                          &trans   &trans   &trans   &trans    &trans        &trans        &trans        &trans
+&none  &none    &none    &none    &none    &none                           &kp PLUS      &kp MINUS     &kp KP_MULTIPLY  &kp KP_DIVIDE  &none  &none
+&none  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15                         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9     &none          &none  &none
+&none  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10                         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6     &none          &none  &none
+&none  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &none    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &none          &none  &none
+                         &none    &none    &none    &none    &none         &none         &none         &none
             >;
         };
 
