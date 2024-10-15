@@ -42,11 +42,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4                                                  &out OUT_TOG          &kp EQUAL              &kp GRAVE          &kp PLUS          &kp MINUS      &kp TILDE
-&none             &none         &kp HOME        &kp UP_ARROW    &kp END       &kp PLUS                                                      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE   &kp AMPERSAND     &kp BACKSLASH  &kp UNDER
-&none             &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT     &kp EQUAL                                                     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOUBLE_QUOTES  &kp PIPE          &kp COLON      &kp DOUBLE_QUOTES
-&ext_power EP_ON  &none         &none           &none           &none         &kp LG(LS(S))  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN      &kp GREATER_THAN  &kp QUESTION   &soft_off
-                                                &none           &none         &mo 3          &trans                  &trans                 &none                 &kp LC(BACKSPACE)      &kp LC(DELETE)
+&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4                                  &out OUT_TOG          &kp EQUAL              &kp GRAVE          &kp PLUS          &kp MINUS      &kp TILDE
+&none             &none         &kp HOME        &kp UP_ARROW    &kp END       &none                                         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE   &kp AMPERSAND     &kp BACKSLASH  &kp UNDER
+&none             &none         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT     &none                                         &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOUBLE_QUOTES  &kp PIPE          &kp COLON      &kp DOUBLE_QUOTES
+&ext_power EP_ON  &none         &none           &none           &none         &none         &kp LG(LS(S))    &kp LG(LS(S))  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN      &kp GREATER_THAN  &kp QUESTION   &soft_off
+                                                &none           &none         &mo 3         &trans           &trans         &none                 &kp LC(BACKSPACE)      &kp LC(DELETE)
             >;
         };
 
@@ -59,11 +59,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1            &bt BT_SEL 2            &bt BT_SEL 3       &bt BT_SEL 4                                          &out OUT_TOG   &trans                 &trans              &trans             &trans     &kp TILDE
-&trans      &none         &kp LS(HOME)            &kp LS(LC(UP_ARROW))    &kp LS(END)        &none                                                 &none          &kp LC(LS(BACKSLASH))  &kp LC(UP_ARROW)    &kp LC(LS(SLASH))  &none      &kp UNDER
-&trans      &kp EXCL      &kp LS(LC(LEFT_ARROW))  &kp LS(LC(DOWN_ARROW))  &kp LS(LC(RIGHT))  &none                                                 &none          &kp LC(LEFT)           &kp LC(DOWN_ARROW)  &kp LC(RIGHT)      &kp COLON  &kp DOUBLE_QUOTES
-&soft_off   &kp LC(Z)     &kp LC(X)               &kp LC(C)               &kp LC(V)          &kp LC(B)     &kp LG(LS(S))    &kp RIGHT_PARENTHESIS  &kp LG(LS(S))  &none                  &kp LESS_THAN       &kp GREATER_THAN   &kp PIPE   &ext_power EP_ON
-                                                  &trans                  &none              &trans        &trans           &trans                 &mo 3          &kp LC(BACKSPACE)      &kp LC(DELETE)
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1            &bt BT_SEL 2            &bt BT_SEL 3       &bt BT_SEL 4                                  &out OUT_TOG  &trans                 &trans              &trans             &trans     &kp TILDE
+&trans      &none         &kp LS(HOME)            &kp LS(LC(UP_ARROW))    &kp LS(END)        &none                                         &none         &kp LC(LS(BACKSLASH))  &kp LC(UP_ARROW)    &kp LC(LS(SLASH))  &none      &kp UNDER
+&trans      &kp EXCL      &kp LS(LC(LEFT_ARROW))  &kp LS(LC(DOWN_ARROW))  &kp LS(LC(RIGHT))  &none                                         &none         &kp LC(LEFT)           &kp LC(DOWN_ARROW)  &kp LC(RIGHT)      &kp COLON  &kp DOUBLE_QUOTES
+&soft_off   &kp LC(Z)     &kp LC(X)               &kp LC(C)               &kp LC(V)          &kp LC(B)     &kp LG(LS(S))    &kp LG(LS(S))  &none         &none                  &kp LESS_THAN       &kp GREATER_THAN   &kp PIPE   &ext_power EP_ON
+                                                  &trans                  &none              &trans        &trans           &trans         &mo 3         &kp LC(BACKSPACE)      &kp LC(DELETE)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
