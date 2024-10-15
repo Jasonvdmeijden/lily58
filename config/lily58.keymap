@@ -69,11 +69,11 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp F1  &kp F2            &kp F3          &kp F4          &kp F5     &kp F6                                                                                &kp F7           &kp F8                                     &kp F9                                    &kp F10                     &kp F11    &kp F12
-&trans  &ext_power EP_ON  &kp HOME        &kp UP_ARROW    &kp END    &none                                                                                 &kp EXCLAMATION  &kp LEFT_BRACE                             &kp RIGHT_BRACE                           &kp EXCL                    &none      &kp TILDE
-&trans  &soft_off         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none                                                                                 &kp AMPS         &holdtapmod LEFT_PARENTHESIS LEFT_CONTROL  &holdtapmod RIGHT_PARENTHESIS LEFT_SHIFT  &holdtapmod EQUAL LEFT_ALT  &kp COLON  &kp GRAVE
-&trans  &bt BT_CLR        &bt BT_SEL 1    &bt BT_SEL 2    &kp LG(V)  &out OUT_TOG  &holdtapmod LC(P) LG(LS(S))    &holdtapmod LC(LS(P)) LC(LS(BACKSLASH))  &kp PIPE         &kp LEFT_BRACKET                           &kp RIGHT_BRACKET                         &kp GREATER_THAN            &kp SLASH  &kp BACKSLASH
-                                          &trans          &none      &trans        &trans                         &trans                                   &trans           &trans                                     &trans
+&kp F1  &kp F2            &kp F3          &kp F4          &kp F5     &kp F6                                                                                &kp F7            &kp F8                &kp F9                 &kp F10           &kp F11    &kp F12
+&trans  &ext_power EP_ON  &kp HOME        &kp UP_ARROW    &kp END    &none                                                                                 &kp EXCLAMATION   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EXCL          &none      &kp TILDE
+&trans  &soft_off         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none                                                                                 &kp AMPS          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL         &kp COLON  &kp GRAVE
+&trans  &bt BT_CLR        &bt BT_SEL 1    &bt BT_SEL 2    &kp LG(V)  &out OUT_TOG  &holdtapmod LC(P) LG(LS(S))    &holdtapmod LC(LS(P)) LC(LS(BACKSLASH))  &kp PIPE          &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp SLASH  &kp BACKSLASH
+                                          &trans          &none      &trans        &trans                         &trans                                   &kp LEFT_CONTROL  &kp LEFT_SHIFT        &kp LEFT_ALT
             >;
         };
     };
