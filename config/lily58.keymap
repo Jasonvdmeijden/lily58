@@ -38,6 +38,58 @@
             #binding-cells = <2>;
             tapping-term-ms = <30>;
         };
+
+        layertap: layertap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LAYERTAP";
+            #binding-cells = <0>;
+            bindings = <&to 0>, <&to 1>, <&to 2>;
+        };
+
+        holdlayertapkp: holdlayertapkp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDLAYERTAPKP";
+            bindings = <&kp>, <&layertap>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        tapbracket: tapbracket {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPBRACKET";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
+        };
+
+        tapbrace: tapbrace {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPBRACE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE>, <&kp RIGHT_BRACE>;
+        };
+
+        tapparenthesis: tapparenthesis {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPPARENTHESIS";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
+        };
+
+        tapgreaterthan: tapgreaterthan {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPGREATERTHAN";
+            #binding-cells = <0>;
+            bindings = <&kp GREATER_THAN>, <&kp LESS_THAN>;
+        };
+
+        tapslash: tapslash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPSLASH";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+        };
     };
 
     keymap {
@@ -52,11 +104,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp NUMBER_6                            &kp N7         &kp N8      &kp N9        &kp N0   &kp MINUS     &kp EQUAL
-&kp TAB           &kp Q         &kp W         &kp E         &kp R   &kp T                                   &kp Y          &kp U       &kp I         &kp O    &kp P         &kp ESCAPE
-&kp CAPS          &kp A         &kp S         &kp D         &kp F   &kp G                                   &kp H          &kp J       &kp K         &kp L    &kp SEMI      &tapqoutes
-&kp LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V   &kp B           &kp HOME     &kp END    &kp N          &kp M       &kp COMMA     &kp DOT  &kp QUESTION  &kp ENTER
-                                              &kp LALT      &mo 1   &kp LEFT_SHIFT  &kp SPACE    &kp SPACE  &kp BACKSPACE  &kp DELETE  &kp LEFT_WIN
+&kp NUMBER_1      &kp NUMBER_2         &kp NUMBER_3         &kp NUMBER_4         &kp N5               &kp NUMBER_6                            &kp N7         &kp N8               &kp N9        &kp N0                      &kp MINUS                       &kp EQUAL
+&kp TAB           &kp Q                &kp W                &kp E                &kp R                &kp T                                   &kp Y          &kp U                &kp I         &kp O                       &holdtapmod P LC(LS(P))         &kp CAPS
+&kp ESC           &holdtapmod A LC(A)  &holdtapmod S LC(S)  &kp D                &holdtapmod F LC(F)  &kp G                                   &kp H          &holdtapmod J LC(P)  &kp K         &kp L                       &kp SEMI                        &tapqoutes
+&kp LEFT_CONTROL  &holdtapmod Z LC(Z)  &holdtapmod X LC(X)  &holdtapmod C LC(C)  &holdtapmod V LC(V)  &kp B           &kp HOME     &kp END    &kp N          &kp M                &kp COMMA     &holdtapmod DOT LC(PERIOD)  &holdtapmod QUESTION LC(SLASH)  &kp ENTER
+                                                            &kp LALT             &layertap            &kp LEFT_SHIFT  &kp SPACE    &kp SPACE  &kp BACKSPACE  &kp DELETE           &kp LEFT_WIN
             >;
         };
 
@@ -69,11 +121,21 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp F1  &kp F2            &kp F3          &kp F4          &kp F5     &kp F6                                                                                &kp F7           &kp F8                &kp F9                 &kp F10           &kp F11    &kp F12
-&trans  &ext_power EP_ON  &kp HOME        &kp UP_ARROW    &kp END    &none                                                                                 &kp EXCLAMATION  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp EXCL          &none      &kp TILDE
-&trans  &soft_off         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none                                                                                 &kp AMPS         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL         &kp COLON  &kp GRAVE
-&trans  &bt BT_CLR        &bt BT_SEL 1    &bt BT_SEL 2    &kp LG(V)  &out OUT_TOG  &holdtapmod LC(P) LG(LS(S))    &holdtapmod LC(LS(P)) LC(LS(BACKSLASH))  &kp PIPE         &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp SLASH  &kp BACKSLASH
-                                          &trans          &none      &trans        &trans                         &trans                                   &kp LEFT_SHIFT   &kp LEFT_CONTROL      &kp LEFT_ALT
+&kp F1  &kp F2  &kp F3          &kp F4          &kp F5     &kp F6                                                                          &kp F7           &kp F8           &kp F9            &kp F10              &kp F11          &kp F12
+&trans  &none   &kp HOME        &kp UP_ARROW    &kp END    &none                                                                           &kp EXCLAMATION  &tapparenthesis  &tapbrace         &tapbracket          &tapgreaterthan  &kp TILDE
+&trans  &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none                                                                           &kp AMPS         &kp LEFT_SHIFT   &kp LEFT_CONTROL  &kp LEFT_ALT         &kp EQUAL        &kp GRAVE
+&trans  &none   &none           &none           &none      &none   &holdtapmod LC(P) LG(LS(S))    &holdtapmod LC(LS(P)) LC(LS(BACKSLASH))  &kp PIPE         &kp LC(X)        &kp LC(C)         &holdtapmod V LG(V)  &tapslash        &trans
+                                &trans          &trans     &trans  &trans                         &trans                                   &trans           &trans           &trans
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &out OUT_TOG                  &none  &none  &none  &none  &soft_off  &ext_power EP_ON
+&none       &none         &none         &none         &none         &none                         &none  &none  &none  &none  &none      &none
+&none       &none         &none         &none         &none         &none                         &none  &none  &none  &none  &none      &none
+&none       &none         &none         &none         &none         &none         &none    &none  &none  &none  &none  &none  &none      &none
+                                        &none         &none         &none         &none    &none  &none  &none  &none
             >;
         };
     };
