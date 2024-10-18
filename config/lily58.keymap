@@ -90,6 +90,41 @@
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp BACKSLASH>;
         };
+
+        tappaste: tappaste {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPPASTE";
+            #binding-cells = <0>;
+            bindings = <&kp LC(V)>, <&kp LG(V)>;
+        };
+
+        tapend: tapend {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPEND";
+            #binding-cells = <0>;
+            bindings = <&kp LC(END)>, <&kp LG(K_BACK)>;
+        };
+
+        taphome: taphome {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPHOME";
+            #binding-cells = <0>;
+            bindings = <&kp LC(HOME)>, <&kp LG(HOME)>;
+        };
+
+        tapcolon: tapcolon {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPCOLON";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&kp SEMICOLON>;
+        };
+
+        tapunderscore: tapunderscore {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPUNDERSCORE";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+        };
     };
 
     keymap {
