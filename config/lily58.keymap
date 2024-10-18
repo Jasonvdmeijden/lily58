@@ -43,7 +43,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LAYERTAP";
             #binding-cells = <0>;
-            bindings = <&to 0>, <&to 1>, <&to 2>;
+            bindings = <&to 0>, <&to 2>, <&to 3>;
         };
 
         holdlayertapkp: holdlayertapkp {
@@ -90,6 +90,41 @@
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp BACKSLASH>;
         };
+
+        tappaste: tappaste {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPPASTE";
+            #binding-cells = <0>;
+            bindings = <&kp LC(V)>, <&kp LG(V)>;
+        };
+
+        tapend: tapend {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPEND";
+            #binding-cells = <0>;
+            bindings = <&kp LC(END)>, <&kp LG(K_BACK)>;
+        };
+
+        taphome: taphome {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPHOME";
+            #binding-cells = <0>;
+            bindings = <&kp LC(HOME)>, <&kp LG(HOME)>;
+        };
+
+        tapcolon: tapcolon {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPCOLON";
+            #binding-cells = <0>;
+            bindings = <&kp COLON>, <&kp SEMICOLON>;
+        };
+
+        tapunderscore: tapunderscore {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPUNDERSCORE";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp UNDERSCORE>;
+        };
     };
 
     keymap {
@@ -104,11 +139,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5     &kp NUMBER_6                                &kp N7         &kp N8      &kp N9        &kp N0   &kp MINUS     &kp EQUAL
-&kp TAB           &kp Q         &kp W         &kp E         &kp R      &kp T                                       &kp Y          &kp U       &kp I         &kp O    &kp P         &kp CAPS
-&kp ESC           &kp A         &kp S         &kp D         &kp F      &kp G                                       &kp H          &kp J       &kp K         &kp L    &kp SEMI      &tapqoutes
-&kp LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V      &kp B           &kp LC(P)    &kp LC(LS(P))  &kp N          &kp M       &kp COMMA     &kp DOT  &kp QUESTION  &kp ENTER
-                                              &kp LALT      &layertap  &kp LEFT_SHIFT  &kp SPACE    &kp SPACE      &kp BACKSPACE  &kp DELETE  &kp LEFT_WIN
+&kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp NUMBER_6                                &kp N7         &kp N8     &kp N9      &kp N0   &kp MINUS     &kp EQUAL
+&kp TAB           &kp Q         &kp W         &kp E         &kp R   &kp T                                       &kp Y          &kp U      &kp I       &kp O    &kp P         &kp LEFT_WIN
+&kp ESC           &kp A         &kp S         &kp D         &kp F   &kp G                                       &kp H          &kp J      &kp K       &kp L    &kp SEMI      &tapqoutes
+&kp LEFT_CONTROL  &kp Z         &kp X         &kp C         &kp V   &kp B           &kp LC(P)    &kp LC(LS(P))  &kp N          &kp M      &kp COMMA   &kp DOT  &kp QUESTION  &kp ENTER
+                                              &kp LALT      &mo 1   &kp LEFT_SHIFT  &kp SPACE    &kp SPACE      &kp BACKSPACE  &layertap  &kp DELETE
             >;
         };
 
@@ -121,11 +156,21 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp F1  &kp F2      &kp F3          &kp F4          &kp F5     &kp F6                                       &kp F7           &kp F8           &kp F9            &kp F10       &kp F11          &kp F12
-&trans  &none       &kp HOME        &kp UP_ARROW    &kp END    &none                                        &kp EXCLAMATION  &tapparenthesis  &tapbrace         &tapbracket   &tapgreaterthan  &kp TILDE
-&trans  &kp K_BACK  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp K_FORWARD                                &kp AMPS         &kp LEFT_SHIFT   &kp LEFT_CONTROL  &kp LEFT_ALT  &kp EQUAL        &kp GRAVE
-&trans  &none       &none           &none           &none      &none          &kp LG(LS(S))    &kp LC(TAB)  &kp PIPE         &kp LC(X)        &kp LC(C)         &kp LC(V)     &tapslash        &trans
-                                    &trans          &trans     &trans         &trans           &trans       &trans           &trans           &trans
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH       &kp DOLLAR      &kp PERCENT  &kp CARET                                &kp AMPERSAND    &kp ASTERISK     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS     &kp PLUS
+&trans           &none        &kp LC(SLASH)  &kp LC(PERIOD)  &kp LC(S)    &kp LC(Y)                                &kp EXCLAMATION  &kp EQUAL        &tapgreaterthan       &kp PLUS               &kp ASTERISK  &kp TILDE
+&trans           &kp LC(A)    &kp LC(X)      &kp LC(C)       &tappaste    &kp LC(Z)                                &kp AMPS         &tapparenthesis  &tapbrace             &tapbracket            &tapcolon     &kp GRAVE
+&trans           &none        &none          &none           &none        &none      &kp LG(LS(S))    &kp LC(TAB)  &kp PIPE         &kp DOLLAR       &kp PERCENT           &tapunderscore         &tapslash     &trans
+                                             &trans          &trans       &trans     &trans           &trans       &trans           &trans           &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&kp F1  &kp F2     &kp F3          &kp F4          &kp F5     &kp F6                    &kp F7     &kp F8          &kp F9            &kp F10       &kp F11  &kp F12
+&trans  &none      &taphome        &kp UP_ARROW    &tapend    &none                     &none      &kp LC(X)       &kp LC(C)         &tappaste     &none    &none
+&trans  &kp LC(A)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &none                     &kp ENTER  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &none    &none
+&trans  &none      &none           &none           &none      &none   &none     &none   &none      &kp LC(Z)       &kp LC(Y)         &none         &none    &trans
+                                   &trans          &trans     &trans  &trans    &trans  &trans     &trans          &trans
             >;
         };
 
