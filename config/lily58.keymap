@@ -194,11 +194,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp NUMBER_1      &kp NUMBER_2  &kp NUMBER_3            &kp NUMBER_4         &kp N5                    &kp NUMBER_6                                                          &kp N7                  &kp N8                    &kp N9               &kp N0                  &kp MINUS  &kp EQUAL
-&kp TAB           &kp Q         &kp W                   &kp E                &kp R                     &kp T                                                                 &kp Y                   &kp U                     &kp I                &kp O                   &kp P      &kp BACKSLASH
-&kp ESCAPE        &kp A         &holdtapmod LEFT_ALT S  &holdtapmod LCTRL D  &holdtapmod LEFT_SHIFT F  &holdtapmod LEFT_WIN G                                                &holdtapmod LEFT_WIN H  &holdtapmod LEFT_SHIFT J  &holdtapmod LCTRL K  &holdtapmod LEFT_ALT L  &tapcolon  &tapqoutes
-&kp LEFT_CONTROL  &kp Z         &kp X                   &kp C                &kp V                     &kp B                   &tapleftbracket         &taprightbracket      &kp N                   &kp M                     &kp COMMA            &kp DOT                 &kp SLASH  &kp ENTER
-                                                        &tapbracket          &tapbrace                 &tapparenthesis         &hold_tap_mo 1 SPACE    &hold_tap_mo 1 SPACE  &kp BACKSPACE           &kp DELETE                &kp CAPSLOCK
+&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3            &kp NUMBER_4         &kp N5                    &kp NUMBER_6                                                          &kp N7                  &kp N8                    &kp N9               &kp N0                  &kp MINUS  &kp EQUAL
+&tapbracket      &kp Q         &kp W                   &kp E                &kp R                     &kp T                                                                 &kp Y                   &kp U                     &kp I                &kp O                   &kp P      &kp GRAVE
+&tapparenthesis  &kp A         &holdtapmod LEFT_ALT S  &holdtapmod LCTRL D  &holdtapmod LEFT_SHIFT F  &holdtapmod LEFT_WIN G                                                &holdtapmod LEFT_WIN H  &holdtapmod LEFT_SHIFT J  &holdtapmod LCTRL K  &holdtapmod LEFT_ALT L  &tapcolon  &kp SINGLE_QUOTE
+&tapbrace        &kp Z         &kp X                   &kp C                &kp V                     &kp B                   &kp LS(TAB)             &kp TAB               &kp N                   &kp M                     &kp COMMA            &kp DOT                 &tapslash  &kp DOUBLE_QUOTES
+                                                       &kp LEFT_WIN         &kp ESCAPE                &kp ENTER               &hold_tap_mo 1 SPACE    &hold_tap_mo 1 SPACE  &kp BACKSPACE           &kp DELETE                &kp CAPSLOCK
             >;
         };
 
