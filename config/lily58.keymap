@@ -23,6 +23,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <30>;
+            flavor = "tap-preferred";
         };
 
         tapqoutes: tapqoutes {
@@ -179,6 +180,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <30>;
+            flavor = "tap-preferred";
         };
     };
 
