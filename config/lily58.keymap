@@ -15,14 +15,17 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
-        holdtapmod: holdtapmod {
+        holdtapmodright: holdtapmodright {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLDTAPMOD";
+            label = "HOLDTAPMODRIGHT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             flavor = "tap-preferred";
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 42>;
         };
 
         tapqoutes: tapqoutes {
@@ -180,6 +183,19 @@
             #binding-cells = <2>;
             tapping-term-ms = <400>;
             flavor = "tap-preferred";
+            require-prior-idle-ms = <150>;
+        };
+
+        holdtapmodleft: holdtapmodleft {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDTAPMODLEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <400>;
+            flavor = "tap-preferred";
+            hold-trigger-on-release;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 43 44 45 46 47 48 49>;
         };
     };
 
@@ -195,11 +211,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3            &kp NUMBER_4         &kp N5                    &kp NUMBER_6                                                          &kp N7                  &kp N8                    &kp N9               &kp N0                  &kp MINUS  &kp EQUAL
-&tapbracket      &kp Q         &kp W                   &kp E                &kp R                     &kp T                                                                 &kp Y                   &kp U                     &kp I                &kp O                   &kp P      &kp GRAVE
-&tapparenthesis  &kp A         &holdtapmod LEFT_ALT S  &holdtapmod LCTRL D  &holdtapmod LEFT_SHIFT F  &holdtapmod LEFT_WIN G                                                &holdtapmod LEFT_WIN H  &holdtapmod LEFT_SHIFT J  &holdtapmod LCTRL K  &holdtapmod LEFT_ALT L  &tapcolon  &kp SINGLE_QUOTE
-&tapbrace        &kp Z         &kp X                   &kp C                &kp V                     &kp B                   &kp LS(TAB)             &kp TAB               &kp N                   &kp M                     &kp COMMA            &kp DOT                 &tapslash  &kp DOUBLE_QUOTES
-                                                       &kp LEFT_WIN         &kp ESCAPE                &kp ENTER               &hold_tap_mo 1 SPACE    &hold_tap_mo 1 SPACE  &kp BACKSPACE           &kp DELETE                &kp CAPSLOCK
+&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3                &kp NUMBER_4             &kp N5                        &kp NUMBER_6                                                              &kp N7                       &kp N8                         &kp N9                    &kp N0                       &kp MINUS  &kp EQUAL
+&tapbracket      &kp Q         &kp W                       &kp E                    &kp R                         &kp T                                                                     &kp Y                        &kp U                          &kp I                     &kp O                        &kp P      &kp GRAVE
+&tapparenthesis  &kp A         &holdtapmodleft LEFT_ALT S  &holdtapmodleft LCTRL D  &holdtapmodleft LEFT_SHIFT F  &holdtapmodleft LEFT_WIN G                                                &holdtapmodright LEFT_WIN H  &holdtapmodright LEFT_SHIFT J  &holdtapmodright LCTRL K  &holdtapmodright LEFT_ALT L  &tapcolon  &kp SINGLE_QUOTE
+&tapbrace        &kp Z         &kp X                       &kp C                    &kp V                         &kp B                       &kp LS(TAB)             &kp TAB               &kp N                        &kp M                          &kp COMMA                 &kp DOT                      &tapslash  &kp DOUBLE_QUOTES
+                                                           &kp LEFT_WIN             &kp ESCAPE                    &kp ENTER                   &hold_tap_mo 1 SPACE    &hold_tap_mo 1 SPACE  &kp BACKSPACE                &kp DELETE                     &kp CAPSLOCK
             >;
         };
 
